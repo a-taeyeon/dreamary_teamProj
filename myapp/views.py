@@ -24,7 +24,7 @@ def create(request):
 
         post.save()
 
-        return redirect('introduce')  #여기 detail로 바꿔야함  ('detail', post.id)
+        return redirect('detail', post.id) 
     else:
         return render(request, 'new.html')
 
@@ -40,6 +40,6 @@ def update(request, designer_id):
 
         post.save()
 
-        return redirect('introduce')#여기 detail로 바꿔야함 
+        return redirect('detail', post.id) 
     else:
         return render(request, 'update.html', {'designer' : post})    
