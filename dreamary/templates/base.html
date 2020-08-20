@@ -59,7 +59,7 @@
             <a href="{%url 'home'%}" class="navbar-brand d-flex align-items-center">
                 <img src="{%static 'image/Dreamary_Logo.png'%}" alt="Dreamary_Logo.png" width="45px" style="align-self: center;">
             </a>
-            <a href="#" type="button" class="btn btn-light">디자이너 등록하기</a>
+            <a href="{% url 'new' %}" type="button" class="btn btn-light">디자이너 등록하기</a>
         </div>
     </header>
 {%block content%}
