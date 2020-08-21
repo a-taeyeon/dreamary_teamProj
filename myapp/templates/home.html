@@ -21,7 +21,7 @@
         
         <!-- 디자이너 글 띄우는 곳 -->
         {% for designer in designers %}
-        <div class="col-md-4" onclick="location.href='/링크거는곳'">
+        <div class="col-md-4" onclick="location.href='/profile/{{designer.id}}/'">
           <div class="card mb-4 shadow-sm">
             <img src="{{ designer.image.url }}" alt="desingerImage" height="250px">
             <div class="card-body">
