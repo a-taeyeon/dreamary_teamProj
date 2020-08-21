@@ -25,8 +25,8 @@ def create(request):
         post.save()
 
         return redirect('detail', post.id) 
-    else:
-        return render(request, 'new.html')
+    # else:
+    #     return render(request, 'new.html')
 
 def update(request, designer_id):
     post = get_object_or_404(Designer, pk = designer_id)
@@ -43,3 +43,13 @@ def update(request, designer_id):
         return redirect('detail', post.id) 
     else:
         return render(request, 'update.html', {'designer' : post})    
+
+def detail(request, designer_id):
+    designer = get_object_or_404(Designer, pk = designer_id)
+    return render(request, 'detail.html', {'designer' : designer})
+
+def delete(request, designer_id):
+    post = get_object_or_404(Designer, pk = designer_id)
+    post.delete()
+
+    return redirect('home')
